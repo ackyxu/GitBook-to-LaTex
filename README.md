@@ -39,12 +39,25 @@ The books will be stored in the root directory of your build, under the director
 
 This program will retrieve all chapters of the book.
 
+## Packages Used
+
+This program uses the following packages:
+- BeautifulSoup 4.9
+- Selnium
+- Requests
+- os
+- pathlib
+- collections
+- svg.lib
+- reportlab.graphics
+
 ## LaTex Mode
 
 The code maps certain HTML tags in the HTML code to a equalivalent LaTex code.  This is done in htmltolatex.py.
 When everything is done, it will create a main.tex file that will create a table of content and combine the chapters together.
 
 You can use this with your LaTex engine to output in a format you desire.  I personally use it to create a PDF file.
+
 
 ## PDF Mode
 
