@@ -29,4 +29,31 @@ There are 4 files Python files in this repository:
 3. pdfconverter.py
 4. scraper.py
 
-Change the link in scraper.print_gitbook() in main.py to choose the textbook you want to retrieve an offline copy.
+There are two varibles for scraper.print_gitbook(), which you need to change in main.py for your build:
+
+1. the link to the textbook you want to retrieve an offline copy.  Point it to the first chapter of the book
+2.  either "pdf" if you want a copy of the textbook as if you are printing a pdf file off a webpage, or any string for the program to run in LaTex mode
+3.  The name of the directory you wish to store the files in.  It will create a new directory if it does not exsists.
+
+The books will be stored in the root directory of your build, under the directory that you specified in print_gitbook().
+
+This program will retrieve all chapters of the book.
+
+## LaTex Mode
+
+The code maps certain HTML tags in the HTML code to a equalivalent LaTex code.  This is done in htmltolatex.py.
+When everything is done, it will create a main.tex file that will create a table of content and combine the chapters together.
+
+You can use this with your LaTex engine to output in a format you desire.  I personally use it to create a PDF file.
+
+## PDF Mode
+
+I am not creative with naming my functions (haha).
+
+What this mode do is that it will retrieve the HTML request in a headless instance of Google Chrome, and print a PDF copy of the page it requested.
+
+This is exactly the same as if you would go to a webpage, right-click and select print, then choose to print as PDF.
+
+
+
+
